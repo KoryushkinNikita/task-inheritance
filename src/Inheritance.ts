@@ -18,15 +18,15 @@ export class Person {
     readonly _age: number;
 
     constructor(data: IPersonData){
-      this._name = data.name,
-      this._secondName = data.secondName,
-      this._age = data.age
+      this._name = data.name;
+      this._secondName = data.secondName;
+      this._age = data.age;
     }
     getData():IPersonData{
       return {
         name:this._name,
         secondName:this._secondName,
-        age:this._age
+        age:this._age,
 
       }
     }
@@ -39,15 +39,15 @@ export class Person {
 export class Student extends Person {
     readonly _phone: string;
     constructor(data:IStudentData){
-      super(data),
-      this._phone = data.phone
+      super(data);
+      this._phone = data.phone;
     }
     getData():IPersonData{
       return{
         name:this._name,
         secondName:this._secondName,
         age:this._age,
-        phone:this._phone
+        phone:this._phone,
       }
     }
 }
